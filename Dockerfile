@@ -42,3 +42,7 @@ RUN \
   pear channel-discover pear.drush.org && \
   pear install drush/drush
 #############################################################################
+CMD \
+  rm -rf /var/www && \
+  ln -s /app/$DOCUMENT_ROOT /var/www && \
+  service apache2 start
