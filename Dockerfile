@@ -1,5 +1,7 @@
 FROM pataquets/apache-php:5.3
 
+EXPOSE 80
+
 VOLUME /app
 
 ADD files/etc/php5/ /etc/php5/
