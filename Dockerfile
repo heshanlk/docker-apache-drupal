@@ -46,5 +46,4 @@ RUN \
 #############################################################################
 CMD \
   rm -rf /var/www && \
-  ln -s /app/$DOCUMENT_ROOT /var/www && \
-  service apache2 start
+  ln -s /app /var/www
