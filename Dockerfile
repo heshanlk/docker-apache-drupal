@@ -1,5 +1,7 @@
 FROM pataquets/apache-php:5.3
 
+VOLUME /app
+
 ADD files/etc/php5/ /etc/php5/
 
 RUN \
@@ -16,7 +18,3 @@ RUN \
   rm -rf /var/lib/apt/lists/ \
   && \
   a2enmod rewrite
-  
-CMD \
-  rm -rf /var/www && \
-  ln -s /app /var/www
