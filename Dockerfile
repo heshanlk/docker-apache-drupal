@@ -21,4 +21,4 @@ RUN \
 
 CMD \
   rm -rf /var/www && \
-  ln -s /app/$DOCUMENT_ROOT /var/www
+  ln -s /app /var/www
