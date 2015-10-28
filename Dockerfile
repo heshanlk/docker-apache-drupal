@@ -47,3 +47,6 @@ RUN \
 CMD \
   rm -rf /var/www && \
   ln -s /app /var/www
+RUN usermod -u 1000 www-data
+RUN usermod -a -G users www-data
+RUN chown -R www-data:www-data /var/www
