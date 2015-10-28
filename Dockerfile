@@ -20,9 +20,6 @@ RUN \
   && \
   a2enmod rewrite
 
-CMD \
-  ln -s /app /var/www/app
-
 RUN \
   a2ensite 0000default && \
   a2dissite default && \
