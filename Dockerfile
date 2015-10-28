@@ -23,5 +23,3 @@ RUN \
 CMD \
   rm -rf /var/www && \
   ln -s /app /var/www
-  
-RUN chown www-data:www-data /var/www
