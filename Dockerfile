@@ -3,6 +3,7 @@ FROM pataquets/apache-php:5.3
 VOLUME /app
 
 ADD files/etc/php5/ /etc/php5/
+ADD files/etc/apache2/sites-available/ /etc/apache2/sites-available/
 
 RUN \
   apt-get update && \
@@ -18,3 +19,11 @@ RUN \
   rm -rf /var/lib/apt/lists/ \
   && \
   a2enmod rewrite
+
+CMD \
+  ln -s /app /var/www/app
+
+RUN \
+  a2ensite 0000default && \
+  a2dissite default && \
+  service apache2 reload
