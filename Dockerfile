@@ -21,6 +21,9 @@ RUN \
   a2enmod rewrite
 
 RUN \
+ln -s /app /var/www/app
+
+RUN \
   a2ensite 0000default && \
   a2dissite default && \
   service apache2 reload
