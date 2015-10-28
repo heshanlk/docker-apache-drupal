@@ -16,3 +16,7 @@ RUN \
   rm -rf /var/lib/apt/lists/ \
   && \
   a2enmod rewrite
+  
+CMD \
+  rm -rf /var/www && \
+  ln -s /app /var/www
