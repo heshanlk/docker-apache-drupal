@@ -1,7 +1,5 @@
 FROM pataquets/apache-php:5.3
 
-VOLUME /app
-
 ADD files/etc/php5/ /etc/php5/
 
 RUN \
