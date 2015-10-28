@@ -21,7 +21,7 @@ RUN \
   a2enmod rewrite
 
 RUN \
-ln -s /app /var/www/app
+ln -s /app /var/www/
 
 RUN \
   a2ensite 0000default && \
